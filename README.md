@@ -19,4 +19,5 @@ Public toilet DB, will display all the public toilets in a city and let the user
 - **Comments List:** Add new comments to the toilets you have been.
 
 ## WireFrame
-![image](https://github.com/user-attachments/assets/c0673f48-b21a-4f01-8450-50c81cfd976e)
+![image](/public/poopee-wireframe.png)
+![image](/public/comments-wireframe.png)
