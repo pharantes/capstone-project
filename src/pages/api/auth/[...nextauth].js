@@ -3,8 +3,8 @@ import GoogleProvider from "next-auth/providers/google";
 import GitHubProvider from "next-auth/providers/github";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
-import dbConnect from "../../../../db/connect";  // MongoDB connection utility
-import User from "../../../../db/models/User";  // User model
+import dbConnect from "../../../../db/connect";
+import User from "../../../../db/models/User";
 
 export default NextAuth({
     providers: [
@@ -28,8 +28,6 @@ export default NextAuth({
             },
         }),
 
-
-        // Credentials provider for manual login (username/password)
         CredentialsProvider({
             name: "Credentials",
             credentials: {
@@ -37,8 +35,7 @@ export default NextAuth({
                 password: { label: "Password", type: "password" },
             },
             async authorize(credentials) {
-                await dbConnect(); // Connect to MongoDB
-
+                await dbConnect();
                 // Find user by username
                 const user = await User.findOne({ username: credentials.username });
 
@@ -84,7 +81,7 @@ export default NextAuth({
             return token;
         },
         async redirect({ url, baseUrl }) {
-            return "/map"; // Redirect all logins to /map
+            return "/"; // Redirect all logins to /
         },
 
         // Account creation (when using OAuth)
@@ -111,6 +108,6 @@ export default NextAuth({
     },
     secret: process.env.NEXTAUTH_SECRET,
     pages: {
-        signIn: "/",
+        signIn: "/login-signup",
     },
 });
