@@ -6,7 +6,7 @@ Capstone project for Spiced Academy
 
 ## Description
 
-Public toilet DB, will display all the public toilets in a city and let the user interect with the map and toggle favorite toilets to see them in a list.
+The app will display all the public toilets in Berlin and let the user interect with the map and toggle favorite toilets to see them in a list.
 
 ### Main Features
 - **Map** Map with public toilets.
