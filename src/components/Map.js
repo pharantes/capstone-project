@@ -11,6 +11,9 @@ justify-content: space-between;
 const position = [52.52, 13.405]; // Berlin center
 
 // Custom marker icon
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import L from "leaflet"; // Import Leaflet properly
+import "leaflet/dist/leaflet.css"; // Import Leaflet CSS
 const toiletIcon = new L.Icon({
     iconUrl: "/poo.svg",
     iconSize: [32, 32],
@@ -67,4 +70,4 @@ const Map = ({ toiletsData = [] }) => {
         </MapContainer>
     );
 };
-export default Map;
+

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> login-branch
 const Layout = ({ children }) => {
     return (
         <div style={{ minHeight: '100vh', paddingBottom: '60px' }}>

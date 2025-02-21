@@ -2,8 +2,8 @@ import mongoose from "mongoose";
 const { Schema } = mongoose;
 const favoriteSchema = new Schema(
   {
-    name: { type: String, required: true },
     userId: { type: Schema.Types.ObjectId, ref: "User" },
+    toiletIds: { type: Array },
   },
   { timestamps: true }
 );
