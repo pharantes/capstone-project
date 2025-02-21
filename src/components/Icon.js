@@ -8,15 +8,15 @@ const StyledButton = styled.button`
 `;
 
 export default function Icon({ onToggleFavorite, id }) {
-    const [isFavorite, setFavorite] = useState(false)
+    const [isFavorite, setFavorite] = useState(false);
 
     function handleToggleFavorite() {
-        setFavorite(!isFavorite)
-        onToggleFavorite(id)
+        setFavorite(!isFavorite);
+        onToggleFavorite(id, isFavorite);
     }
 
     return (
-        <StyledButton onClick={() => handleToggleFavorite()}>
+        <StyledButton onClick={handleToggleFavorite}>
             <Image
                 src={isFavorite ? "/favorite.svg" : "/not-favorite.svg"}
                 width={32}
