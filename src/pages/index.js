@@ -11,7 +11,7 @@ const MapPage = () => {
     const { data: session, status } = useSession();
     const router = useRouter();
     const [isClient, setIsClient] = useState(false);
-
+    console.log(session)
     // Ensure this runs only in the browser
     useEffect(() => {
         setIsClient(true);

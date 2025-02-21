@@ -6,8 +6,6 @@ const UserSchema = new mongoose.Schema(
     email: { type: String, unique: true, required: true },
     bio: { type: String, default: "" },
     image: { type: String },
-    hash: { type: String },  // Password hash
-    salt: { type: String },  // Salt for password hashing
   },
   { timestamps: true }
 );
