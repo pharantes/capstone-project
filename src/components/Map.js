@@ -19,8 +19,17 @@ const Map = ({ toiletsData = [] }) => {
                 toiletsData.map((toilet) => (
                     <Marker key={toilet.id} position={[toilet.lat, toilet.lon]} icon={toiletIcon}>
                         <Popup>
-                            <h3>{toilet.name}</h3>
-                            <p>{toilet.address}</p>
+                            <h3>Name: {toilet.name}</h3>
+                            <span>Description: {toilet.description}</span><br />
+                            <span>Access: {toilet.access}</span><br />
+                            <span>Address: {toilet.address}</span><br />
+                            <span>Fee: {toilet.fee}</span><br />
+                            <span>Charge: {toilet.charge}</span><br />
+                            <span>Male: {toilet.male}</span><br />
+                            <span>Female: {toilet.female}</span><br />
+                            <span>Unisex: {toilet.unisex}</span><br />
+                            <span>Wheelchair: {toilet.wheelchair}</span><br />
+
                         </Popup>
                     </Marker>
                 ))
