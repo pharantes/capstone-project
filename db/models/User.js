@@ -4,8 +4,6 @@ var UserSchema = new mongoose.Schema(
     email: String,
     bio: String,
     image: String,
-    hash: String,
-    salt: String,
   },
   { timestamps: true }
 );
